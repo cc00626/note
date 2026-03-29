@@ -421,3 +421,19 @@ export default function App() {
 通过和后端建立websocke连接，当路由状态有变化的时候后端会推送permission：update消息，前端会重新发起请求，更新路由。
 
 
+
+### 数据的权限怎么办的
+
+数据的权限，是怎么，数据改个请求就能看到全部的数据，完全由后端来进行决定，在发送token的时候回解析用户的身份，然后看有没有这个权限。
+
+
+
+### 按钮的权限怎么弄
+
+```
+function usePermission(code) {
+  const permissions = usePermissionStore(state => state.buttons)
+  return permissions.includes(code)
+}
+```
+

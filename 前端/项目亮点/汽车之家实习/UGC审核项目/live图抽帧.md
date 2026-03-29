@@ -147,6 +147,26 @@ timePoints = timePoints.map(time => Math.min(time, Math.max(0, duration - 0.1)))
 在我们的审核系统中，App 端已经支持发布 **Live 图**。
  Live 图本质上是 **大约 3 秒的视频**。
 
+```
+//ios
+IMG_1234.HEIC  （封面图）
+IMG_1234.MOV   （3秒视频）
+
+//android
+安卓厂商比较放飞自我：
+
+有的用 .mp4
+有的用 .jpg + mp4
+有的把视频嵌进图片（比如 Motion Photo）
+
+👉 举例：
+
+Google Pixel：Motion Photo（JPEG + MP4嵌入）
+小米/华为：类似结构但实现不同
+```
+
+
+
 如果在审核系统中直接以视频形式展示，会有两个问题：
 
  审核人员需要 **反复播放视频** 才能看清内容
